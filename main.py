@@ -1,48 +1,50 @@
-# Generating SKUs
+# Generating Receipts
 from pyscript import display, document
 
 
-def generate_sku(e):
+def generate_receipt(e):
     # Clear the previous result container
     document.getElementById('result').innerHTML = ""
 
-    product = ""
-    product_code = ""
-    quantity = document.getElementById('quantity').value
+    subtotal = 0.0
+    receipt_text = "================================\n"
+    receipt_text += " OBMC ENTREP FAIR: CAKE SHOP\n"
+    receipt_text += "================================\n"
 
-    # Check Product 1
-    if document.getElementById('product1').checked:
-        product = "Strawberry Shortcake"
-        product_code = "Strawberry Shortcake"
+    # Check Item 1
+    if document.getElementById('dessert1').checked:
+        receipt_text += "Strawberry Shortcake  P150.00\n"
+        subtotal += 150.00
 
-    # Check Product 2
-    if document.getElementById('product2').checked:
-        product = "Mango Cheesecake"
-        product_code = "Mango Cheesecake"
+    # Check Item 2
+    if document.getElementById('dessert2').checked:
+        receipt_text += "Mango Cheesecake      P150.00\n"
+        subtotal += 150.00
 
-    # Check Product 3
-    if document.getElementById('product3').checked:
-        product = "Red Velvet Cake"
-        product_code = "Red Velvet Cake"
+    # Check Item 3
+    if document.getElementById('dessert3').checked:
+        receipt_text += "Red Velvet Cake       P150.00\n"
+        subtotal += 150.00
 
-    # Check Product 4
-    if document.getElementById('product4').checked:
-        product = "Mango Graham Cake"
-        product_code = "Mango Graham Cake"
+    # Check Item 4
+    if document.getElementById('dessert4').checked:
+        receipt_text += "Mango Graham Cake     P150.00\n"
+        subtotal += 150.00
 
-    # Check Product 5
-    if document.getElementById('product5').checked:
-        product = "Oreo Cheesecake"
-        product_code = "Oreo Cheesecake"
+    # Check Item 5
+    if document.getElementById('dessert5').checked:
+        receipt_text += "Oreo Cheesecake       P150.00\n"
+        subtotal += 150.00
 
-    # Check if all information is provided
-    if product == "" or quantity == "":
-        display("Please complete all fields.", target='result')
-        return
+    # Calculate VAT (12%) and Total Amount
+    vat = subtotal * 0.12
+    total_amount = subtotal + vat
 
-    # Generate the SKU
-    sku = product_code + quantity
+    # Build the pricing breakdown section
+    receipt_text += f"SUBTOTAL:             P{subtotal:>7.2f}\n"
+    receipt_text += f"VAT (12%):            P{vat:>7.2f}\n"
+    receipt_text += f"TOTAL AMOUNT:         P{total_amount:>7.2f}\n"
+    receipt_text += " Thank you for your support!"
 
-    # Display the generated SKU
-    display("Product: " + product, target='result')
-    display("Generated SKU: " + sku, target='result')
+    # Display the final receipt
+    display(receipt_text, target='result')

@@ -19,6 +19,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 30px;
+
 }
 
 /* Main Container */
@@ -31,16 +32,11 @@ header h1 {
     box-shadow: 0 5px 12px #d6a5a5;
 }
 
-/* Shop Title */
-.container h1 {
-    color: #8b5e3c;
-    text-align: center;
-}
-
 /* Menu Title */
-.container p {
-    font-size: 18px;
-    font-weight: bold;
+h3 {
+    color: #8b5e3c;
+    font-size: 22px;
+    text-align: center;
 }
 
 /* Menu */
@@ -48,8 +44,8 @@ header h1 {
     background-color: #ffe4c4;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid #e8b4b8;
     line-height: 2;
+    border: 2px solid #e8b4b8;
 }
 
 /* Checkboxes */
@@ -58,23 +54,12 @@ input[type="checkbox"] {
     margin-right: 8px;
 }
 
-/* Quantity Input */
-input[type="number"] {
-    width: 90%;
-    padding: 10px;
-    border: 2px solid #e8b4b8;
-    border-radius: 8px;
-    font-size: 15px;
-    background-color: #fffaf5;
-    color: #5a3825;
+/* Price */
+b {
+    color: #8b5e3c;
 }
 
-input[type="number"]:focus {
-    outline: none;
-    border-color: #c97c8c;
-}
-
-/* Generate SKU Button */
+/* Generate Receipt Button */
 button {
     background-color: #c97c8c;
     color: white;
@@ -83,20 +68,17 @@ button {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
 button:hover {
     background-color: #a85f70;
 }
 
-/* Receipt Generator Link */
+/* SKU Generator Link */
 a {
-    display: block;
     color: #8b5e3c;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 20px;
 }
 
 a:hover {
@@ -104,15 +86,17 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Generated SKU */
+/* Receipt */
 #result {
     background-color: #ffe4c4;
     border: 2px solid #c97c8c;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 25px;
     border-radius: 10px;
+    white-space: pre-line;
+    font-family: monospace;
+    line-height: 1.5;
     color: #5a3825;
-    line-height: 1.6;
 }
 
 /* Footer */
@@ -120,7 +104,7 @@ footer {
     background-color: #8b5e3c;
     color: #ffe4e1;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     margin-top: 40px;
 }
 
