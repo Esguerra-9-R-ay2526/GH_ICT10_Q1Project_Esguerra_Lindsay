@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKU Generator - Cake Shop</title>
+    <!--Pyscript-->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <!--Style-css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header-->
+     <header><h1>🍰 OBMC Entrep Fair - Dessert Delights</h1></header>
+
+     <div class="container">
+        <i><h1>OBMC Entrep Fair - Cake Shop</h1></i>
+
+        <p>Menu:</p>
+        <div class="Menu">
+            <input type="checkbox" id="product1"> Strawberry Shortcake<br>
+            <input type="checkbox" id="product2">Mango Cheesecake<br>
+            <input type="checkbox" id="product3">Red Velvet Cake<br>
+            <input type="checkbox" id="product4">Mango Graham Cake<br>
+             <input type="checkbox" id="product5">Oreo Cheesecake
+        </div><br>
+
+        <p>Stock Quantity:</p>
+        <input type="number" id="quantity" placeholder="e.g. 3">
+
+        <br><br>
+
+        <button type="submit" py-click="generate_sku">Generate SKU</button>
+
+        <a href="http://127.0.0.1:3000/ICT%20PROJECT/Receipt-Generator/index.html?vscode-livepreview=true">Go to Receipt-Generator</a>
+
+        <div id="result"></div>
+    </div>
+
+    <!--Footer-->
+    <footer><p>OBMC Entrep Fair 2026-2027</p><p>Thank you for supporting our Cake Shop! ♡</p></footer>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>

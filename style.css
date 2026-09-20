@@ -1,0 +1,130 @@
+/* General Page Style */
+body {
+    background-image: url(https://png.pngtree.com/background/20220726/original/pngtree-bakery-products-background-cake-cookie-picture-image_1825821.jpg);
+    background-color: #fce4ec;
+    font-family: Arial, sans-serif;
+    color: #5a3825;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #8b5e3c;
+    color: #ffe4e1;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Main Container */
+.container {
+    background-color: #fff8f0;
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px #d6a5a5;
+}
+
+/* Shop Title */
+.container h1 {
+    color: #8b5e3c;
+    text-align: center;
+}
+
+/* Menu Title */
+.container p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Menu */
+.Menu {
+    background-color: #ffe4c4;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e8b4b8;
+    line-height: 2;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    accent-color: #c97c8c;
+    margin-right: 8px;
+}
+
+/* Quantity Input */
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #e8b4b8;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fffaf5;
+    color: #5a3825;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #c97c8c;
+}
+
+/* Generate SKU Button */
+button {
+    background-color: #c97c8c;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #a85f70;
+}
+
+/* Receipt Generator Link */
+a {
+    display: block;
+    color: #8b5e3c;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    color: #c97c8c;
+    text-decoration: underline;
+}
+
+/* Generated SKU */
+#result {
+    background-color: #ffe4c4;
+    border: 2px solid #c97c8c;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #5a3825;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #8b5e3c;
+    color: #ffe4e1;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
